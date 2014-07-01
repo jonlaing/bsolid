@@ -97,7 +97,7 @@
                 </ul>
 
                 <h3 class="brand">
-                    <img src="<?php bloginfo('template_url') ?>/images/icon.png" />
+                    <img src="<?php bloginfo('template_url') ?>/images/icon.png" alt="Brooklyn Solidarity Network" />
                 </h3>
                 <ul>
                     <li><a href="#mission">Mission</a></li>

@@ -2021,9 +2021,54 @@ body {
 }
 
 #index-spacer {
-  height: 700px;
+  height: 100%;
 }
 
+@-webkit-keyframes fade-white-bg {
+  from {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  to {
+    background: white;
+  }
+}
+@-moz-keyframes fade-white-bg {
+  from {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  to {
+    background: white;
+  }
+}
+@-o-keyframes fade-white-bg {
+  from {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  to {
+    background: white;
+  }
+}
+@-ms-keyframes fade-white-bg {
+  from {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  to {
+    background: white;
+  }
+}
+@keyframes fade-white-bg {
+  from {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  to {
+    background: white;
+  }
+}
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -2227,18 +2272,32 @@ hr.star:after {
   left: 0px;
   right: 0px;
   bottom: 63px;
-  padding-top: 85px;
   z-index: 3;
+}
+.jumbotron .jumbotron-inner {
+  position: absolute;
+  top: 50%;
+  margin-top: -250px;
 }
 .jumbotron .jumbotron-inner h1 {
   text-align: center;
   margin-bottom: 42px;
 }
 .jumbotron .jumbotron-inner p {
-  width: 108%;
+  width: 112%;
   font-size: 18px;
   margin-bottom: 42px;
-  margin-left: -2%;
+  margin-left: -4%;
+  padding: 2%;
+  border-radius: 8px;
+}
+.jumbotron .jumbotron-inner p:hover {
+  -webkit-animation: fade-white-bg 1s;
+  -moz-animation: fade-white-bg 1s;
+  -ms-animation: fade-white-bg 1s;
+  -o-animation: fade-white-bg 1s;
+  animation: fade-white-bg 1s;
+  background: white;
 }
 .jumbotron .jumbotron-inner hr {
   color: #808080;

@@ -6,8 +6,35 @@ body {
 }
 
 #index-spacer {
-    height: 700px;
+    height: 100%;
 }
+
+@-webkit-keyframes fade-white-bg {
+   from { background: rgba(white, 0.0) }
+   to { background: rgba(white, 1.0) }
+}
+
+@-moz-keyframes fade-white-bg {
+   from { background: rgba(white, 0.0) }
+   to { background: rgba(white, 1.0) }
+}
+
+@-o-keyframes fade-white-bg {
+   from { background: rgba(white, 0.0) }
+   to { background: rgba(white, 1.0) }
+}
+
+@-ms-keyframes fade-white-bg {
+   from { background: rgba(white, 0.0) }
+   to { background: rgba(white, 1.0) }
+}
+
+@keyframes fade-white-bg {
+   from { background: rgba(white, 0.0) }
+   to { background: rgba(white, 1.0) }
+}
+
+
 
 .container {
     width: 1200px;
@@ -78,10 +105,12 @@ hr.star:after {
     left: 0px;
     right: 0px;
     bottom: 63px;
-    padding-top: 85px;
     z-index: 3;
 
     .jumbotron-inner {
+        position: absolute;
+        top: 50%;
+        margin-top: -250px;
 
         h1 {
             text-align: center;
@@ -89,10 +118,21 @@ hr.star:after {
         }
 
         p {
-            width: 108%;
+            width: 112%;
             font-size: 18px;
             margin-bottom: 42px;
-            margin-left: -2%;
+            margin-left: -4%;
+            padding: 2%;
+            border-radius: 8px;
+            
+            &:hover {
+                -webkit-animation: fade-white-bg 1s;
+                -moz-animation: fade-white-bg 1s;
+                -ms-animation: fade-white-bg 1s;
+                -o-animation: fade-white-bg 1s;
+                animation: fade-white-bg 1s;
+                background: white;
+            }
         }
 
         hr {
