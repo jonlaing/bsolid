@@ -1,7 +1,7 @@
 /* ==========================================================================
 	Imports
 /* ========================================================================== */
-@import 'reset', 'variables';
+@import 'reset', 'variables', 'mixins','foundation-icons';
 
 /* ==========================================================================
 	Base
@@ -379,4 +379,18 @@ input.button:active {
 	.search-form {
 		background: url($images_dir + 'black_lozenge_@2X.png');
 	}
+}
+
+
+//=============== NEVIS BOLD ====================//
+@font-face {
+    font-family: 'Nevis';
+    src: url('font/nevis-webfont-webfont.eot');
+    src: url('font/nevis-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/nevis-webfont-webfont.woff') format('woff'),
+         url('font/nevis-webfont-webfont.ttf') format('truetype'),
+         url('font/nevis-webfont-webfont.svg#nevisbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }

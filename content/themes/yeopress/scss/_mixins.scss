@@ -1,0 +1,28 @@
+$gutter-width: 15px;
+$col-width: 72px;
+$action-color: #c0272d;
+
+@mixin grid($cols) {
+	width: $cols * $col-width + ($cols - 1) * $gutter-width*2;
+        padding: 0px $gutter-width;
+        display: inline-block;
+}
+
+@mixin prepend($cols) {
+        padding: 0;
+	margin-left: $cols * $col-width + $cols * $gutter-width*2;
+}
+
+@mixin btn($color: white, $bgcolor: $action-color, $radius: 8px, $padding: 8px) {
+    padding: $padding;
+    text-align: center;
+    color: $color;
+    background: $action-color;
+    border-radius: $radius;
+    border: 1px solid darken($action-color, 15%);
+
+    &:hover {
+        background: darken($action-color, 15%);
+        cursor: pointer;
+    }
+}

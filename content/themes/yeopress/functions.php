@@ -11,10 +11,11 @@ function theme_enqueue_scripts(){
 	wp_register_script('global', get_bloginfo('template_url') . '/js/global.js', array('require'), false, true);
 	wp_enqueue_script('global');
 
-	wp_register_script('livereload', 'http://localhost:8888/bsolid:35729/livereload.js?snipver=1', null, false, true);
+	wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
 	wp_enqueue_script('livereload');
 
-	wp_enqueue_style('global', get_bloginfo('template_url') . '/css/global.css');
+        wp_enqueue_style('crimson', 'http://fonts.googleapis.com/css?family=Crimson+Text');
+	wp_enqueue_style('main', get_bloginfo('template_url') . '/css/main.css');
 }
 
 //Add Featured Image Support

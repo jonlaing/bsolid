@@ -1,0 +1,248 @@
+@import 'global';
+
+body {
+    font-family: 'Crimson Text','Adobe Calson',serif;
+    background: white;
+}
+
+#index-spacer {
+    height: 700px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    margin: 0 -$gutter-width;
+}
+
+.text-col-2 {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 30px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 30px; /* Firefox */
+    column-gap: 30px;
+}
+        
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        @include grid($i);
+    }
+
+   .prepend-#{$i} {
+       @include prepend($i);
+   }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Nevis',Futura,sans-serif;
+    text-transform: uppercase;
+}
+
+.btn {
+    @include btn();
+    font-family: 'Nevis', Futura, sans-serif;
+    text-transform: uppercase;
+}
+
+hr {
+    font-family: verdana,helvetica,arial,sans-serif;
+    padding: 0;
+    border: none;
+    border-top: solid 1px #ccc;
+    color: #ccc;
+    text-align: center;
+    height: 1px;
+    margin-bottom: 42px;
+}
+
+hr.star:after {
+    content: "\2605";
+    font-size: 32px;
+    display: inline-block;
+    position: relative;
+    top: -24px;
+    background: white;
+    padding: 0 12px;
+}
+
+.jumbotron {
+    background: #ccc url('../images/bridge.jpg') center center no-repeat fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 63px;
+    padding-top: 85px;
+    z-index: 3;
+
+    .jumbotron-inner {
+
+        h1 {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        p {
+            width: 108%;
+            font-size: 18px;
+            margin-bottom: 42px;
+            margin-left: -2%;
+        }
+
+        hr {
+            color: #808080;
+            border-color: #808080;
+        }
+
+        hr:after {
+            background: #ccc;
+            border-radius: 50%;
+        }
+
+        .social {
+            text-align: center;
+            font-size: 72px;
+
+            i {
+                margin: 0px 15px;
+            }
+
+            a {
+                color: #444;
+                text-decoration: none;
+
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+
+    }
+}
+
+nav > ul {
+    list-style: none;
+}
+
+.navbar {
+    font-family: 'Nevis', Futura, sans-serif;
+    text-transform: uppercase;
+    height: 63px;
+    background: #f1f1f1;
+    border: 1px solid #b2b2b2;
+}
+
+.primary-nav {
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+
+    .container {
+        position: relative;
+        top: 32px;
+    }
+
+    .navbar-inner {
+        display: table;
+        width: 100%;
+
+        ul {
+            display: table-row;
+
+            li {
+                width: 20%;
+                display: table-cell;
+                text-align: center;
+            }
+        }
+
+        a {
+            color: #444;
+            text-decoration: none;
+
+            &:hover {
+                color: $action-color;
+            }
+        }
+    }
+}
+
+.secondary-nav {
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 12px 15px 0;
+
+    ul {
+        display: inline-block;
+        list-style: none;
+        
+        li {
+            display: inline-block;
+            margin: 0 15px;
+
+            a {
+                text-decoration: none;
+                color: #444;
+
+                &:hover {
+                    color: $action-color;
+                }
+            }
+        }
+
+        &.social {
+            float: right;
+            font-size: 36px;
+            margin-top: -5px;
+        }
+    }
+    
+    .brand {
+        display: inline-block;
+        margin-right: 15px;
+    }
+}
+
+article {
+    padding: 72px 0;
+
+    h2 {
+        font-size: 72px;
+        color: $action-color;
+        text-align: center;
+    }
+
+    aside.aeiou {
+        color: #ccc;
+        display: table;
+        width: 100%;
+        font-size: 18px;
+
+        ul {
+            list-style:none;
+            display: table-row;
+
+            li {
+                display: table-cell;
+                text-align: center;
+            }
+        }
+    }
+
+    &#about {
+        background: #ddd url('../images/broadway.jpg') center center no-repeat fixed;
+        background-size: cover;
+    }
+}
