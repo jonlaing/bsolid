@@ -1,7 +1,7 @@
 /* ==========================================================================
 	Imports
 /* ========================================================================== */
-@import 'reset', 'variables', 'mixins','foundation-icons';
+@import 'reset', 'variables', 'mixins','foundation-icons', 'animations';
 
 /* ==========================================================================
 	Base
@@ -236,12 +236,10 @@ input.button:active {
 }
 .article {
 	margin-bottom: $size_base;
-	border-bottom: 1px solid #444;
 }
 .article-header {
 	margin-bottom: $size_base;
 	padding-bottom: $size_base;
-	border-bottom: 1px solid #444;
 }
 .article-title {
 	margin-bottom: 0;
@@ -256,15 +254,18 @@ input.button:active {
 
 /* Sidebar */
 #page-sidebar {
-	background: #eee;
-	padding: $size_base;
+    margin-top: 63px;
 
-	-webkit-border-radius: $size_base;
-	border-radius: $size_base;
+	padding: $size_base;
 
 	& > ul {
 		list-style: none;
+                list-style-position: outside;
 		padding: 0;
+
+                li {
+                    padding-left: 0px;
+                }
 	}
 }
 

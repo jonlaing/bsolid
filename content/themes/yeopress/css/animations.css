@@ -1,0 +1,105 @@
+@-webkit-keyframes fade-white-bg {
+  from {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  to {
+    background: white;
+  }
+}
+@-moz-keyframes fade-white-bg {
+  from {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  to {
+    background: white;
+  }
+}
+@-o-keyframes fade-white-bg {
+  from {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  to {
+    background: white;
+  }
+}
+@-ms-keyframes fade-white-bg {
+  from {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  to {
+    background: white;
+  }
+}
+@keyframes fade-white-bg {
+  from {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  to {
+    background: white;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    top: 25%;
+    opacity: 0.0;
+  }
+
+  25% {
+    top: 25%;
+    opacity: 0.0;
+  }
+
+  100% {
+    top: 50%;
+    opacity: 1.0;
+  }
+}
+@-moz-keyframes fade-in {
+  from {
+    top: 25%;
+    opacity: 0.0;
+  }
+
+  to {
+    top: 50%;
+    opacity: 1.0;
+  }
+}
+@-o-keyframes fade-in {
+  from {
+    top: 25%;
+    opacity: 0.0;
+  }
+
+  to {
+    top: 50%;
+    opacity: 1.0;
+  }
+}
+@-ms-keyframes fade-in {
+  from {
+    top: 25%;
+    opacity: 0.0;
+  }
+
+  to {
+    top: 50%;
+    opacity: 1.0;
+  }
+}
+@keyframes fade-in {
+  from {
+    top: 25%;
+    opacity: 0.0;
+  }
+
+  to {
+    top: 50%;
+    opacity: 1.0;
+  }
+}

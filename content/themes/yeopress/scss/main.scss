@@ -3,37 +3,18 @@
 body {
     font-family: 'Crimson Text','Adobe Calson',serif;
     background: white;
+    width: 100%;
 }
 
 #index-spacer {
     height: 100%;
 }
 
-@-webkit-keyframes fade-white-bg {
-   from { background: rgba(white, 0.0) }
-   to { background: rgba(white, 1.0) }
-}
 
-@-moz-keyframes fade-white-bg {
-   from { background: rgba(white, 0.0) }
-   to { background: rgba(white, 1.0) }
+a {
+    color: $action-color;
+    text-decoration: none;
 }
-
-@-o-keyframes fade-white-bg {
-   from { background: rgba(white, 0.0) }
-   to { background: rgba(white, 1.0) }
-}
-
-@-ms-keyframes fade-white-bg {
-   from { background: rgba(white, 0.0) }
-   to { background: rgba(white, 1.0) }
-}
-
-@keyframes fade-white-bg {
-   from { background: rgba(white, 0.0) }
-   to { background: rgba(white, 1.0) }
-}
-
 
 
 .container {
@@ -42,7 +23,8 @@ body {
 }
 
 .row {
-    margin: 0 -$gutter-width;
+    margin-left: -$gutter-width;
+    margin-right: -$gutter-width * 2;
 }
 
 .text-col-2 {
@@ -58,6 +40,7 @@ body {
 @for $i from 1 through 12 {
     .col-#{$i} {
         @include grid($i);
+        vertical-align: top;
     }
 
    .prepend-#{$i} {
@@ -74,6 +57,18 @@ h1,h2,h3,h4,h5,h6 {
     @include btn();
     font-family: 'Nevis', Futura, sans-serif;
     text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn-lg {
+    font-size: 18px;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.btn-sm {
+    font-size: 14px;
+    border-radius: 4px;
 }
 
 hr {
@@ -85,6 +80,7 @@ hr {
     text-align: center;
     height: 1px;
     margin-bottom: 42px;
+    clear:both;
 }
 
 hr.star:after {
@@ -95,6 +91,7 @@ hr.star:after {
     top: -24px;
     background: white;
     padding: 0 12px;
+    border-radius: 50%;
 }
 
 .jumbotron {
@@ -111,6 +108,12 @@ hr.star:after {
         position: absolute;
         top: 50%;
         margin-top: -250px;
+        -webkit-animation: fade-in 1.5s;
+        -moz-animation: fade-in 1.5s;
+        -ms-animation: fade-in 1.5s;
+        -o-animation: fade-in 1.5s;
+        animation: fade-in 1.5s;
+        
 
         h1 {
             text-align: center;
@@ -142,7 +145,6 @@ hr.star:after {
 
         hr:after {
             background: #ccc;
-            border-radius: 50%;
         }
 
         .social {
@@ -188,7 +190,7 @@ nav > ul {
 
     .container {
         position: relative;
-        top: 32px;
+        top: 24px;
     }
 
     .navbar-inner {
@@ -258,10 +260,89 @@ nav > ul {
 article {
     padding: 72px 0;
 
+    &.article {
+        padding: 42px 0;
+        &:after {
+            content: " ";
+            clear: both;
+        }
+    }
+
     h2 {
         font-size: 72px;
         color: $action-color;
         text-align: center;
+        margin-bottom: 42px;
+    }
+
+    .article-title {
+        text-align: left;
+        font-size: 2em;
+        color: $action-color;
+    }
+
+    .article-content {
+        text-align: justify;
+    }
+
+    .featured-image {
+        float: left;
+
+        img {
+            border: #ddd 1px solid;
+            padding: 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-right: 15px;
+        }
+    }
+
+    hr.star {
+        color: #808080;
+        border-color: #808080;
+        margin-bottom: 63px;
+        background: #ccc;
+
+        &:after {
+            background: #ccc;
+        }
+    }
+
+
+    h4 {
+    }
+
+    small {
+        font-size: 14px;
+        color: #444;
+        font-style: italic;
+    }
+
+    section {
+        > div {
+            margin-top: 10px;
+            margin-bottom: 42px;
+            text-align: justify;
+        }
+
+        h4 {
+            font-size: 18px;
+            height: 54px;
+            border-bottom: 1px dotted #808080;
+
+            a {
+                color: #444;
+                text-decoration: none;
+
+                &:hover {
+                    color: $action-color;
+                }
+            }
+        }
+    }
+
+    .attachment-news-thumb {
+        margin-bottom: 21px;
     }
 
     aside.aeiou {
@@ -285,4 +366,47 @@ article {
         background: #ddd url('../images/broadway.jpg') center center no-repeat fixed;
         background-size: cover;
     }
+
+    &#news {
+        background: #ddd url('../images/roof.jpg') center center no-repeat fixed;
+        background-size: cover;
+    }
+    &#contact {
+        a.need {
+            font-size: 24px;
+            font-family: 'Nevis', sans-serif;
+
+            i {
+                font-size: 36px;
+                position: relative;
+                top: 7px;
+            }
+        }
+    }
+
+    dt {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 11px;
+    }
+
+    dd {
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 42px;
+        text-align: justify;
+    }
+}
+
+#page-content {
+    padding-top: 96px;
+
+    article {
+        padding-top: 0;
+    }
+}
+
+footer {
+    padding: 21px 0 72px;
+    text-align: center;
 }

@@ -20,6 +20,7 @@ function theme_enqueue_scripts(){
 
 //Add Featured Image Support
 add_theme_support('post-thumbnails');
+add_image_size( 'news-thumb', 300, 168, true );
 
 // Clean up the <head>
 function removeHeadLinks() {
